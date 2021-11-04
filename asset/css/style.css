@@ -1,0 +1,184 @@
+calendar-app .frame {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+calendar-app .frame.expanded {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+calendar-app .frame .head {
+  background-color: #d93030;
+}
+
+calendar-app .frame .head .actions .action {
+  background-color: #ac2020;
+}
+
+calendar-app .frame .head .actions .action:hover {
+  background-color: #971c1c;
+}
+
+calendar-app .frame .head .title {
+  color: #fff;
+  font-weight: 500;
+}
+
+calendar-app .frame .body {
+  position: relative;
+}
+
+calendar-app .frame .body .controls {
+  height: 38px;
+}
+
+calendar-app .frame .body .table {
+  height: 100%;
+}
+
+calendar-app .frame .body .table ul.table-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+calendar-app .frame .body .table ul.table-head li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc(100% / 7);
+          flex: 1 0 calc(100% / 7);
+}
+
+calendar-app .frame .body .table .table-head {
+  height: 50px;
+}
+
+calendar-app .frame .body .table .table-head li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10px;
+  line-height: 0;
+  font-weight: 500;
+  color: #333333;
+}
+
+calendar-app .frame .body .table .table-body {
+  margin: 0;
+  padding: 0;
+  border-left: 1px solid #9b9b9b;
+  border-top: 1px solid #9b9b9b;
+}
+
+calendar-app .frame .body .calendar__container .calendar__create-event {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: #000;
+  z-index: 100;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+calendar-app .frame .body .calendar__container .calendar__create-event .calender__create-event__modal {
+  max-width: 500px;
+  width: 100%;
+  height: 400px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+calendar-app .frame .body .calendar__container .calendar__days__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+}
+
+calendar-app .frame .body .calendar__container .calendar__days__wrapper .calendar__days__item {
+  height: 90px;
+  border-right: 1px solid #9b9b9b;
+  border-bottom: 1px solid #9b9b9b;
+  padding-top: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+calendar-app .frame .body .calendar__container .calendar__days__wrapper .calendar__days__item.currentDay {
+  background: #ff000036;
+}
+
+calendar-app .frame .body .calendar__container .calendar__days__wrapper .calendar__days__item.empty {
+  background: silver;
+}
+
+calendar-app .frame .body .calendar__container .calendar__events__day {
+  width: 100%;
+}
+
+calendar-app .frame .body .calendar__container .calendar__week__wrapper {
+  position: relative;
+}
+
+calendar-app .frame .body .calendar__container .calendar__days__events__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin-top: 25px;
+  overflow: hidden;
+}
+
+calendar-app .frame .body .calendar__container .calendar__events__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.9em;
+  padding: 4px 10px;
+  margin-bottom: 1px;
+}
+
+calendar-app .frame .body .calendar__container .calendar__events__item span {
+  height: 16px;
+}
+
+calendar-app .frame .body .calendar__container .calendar__events__item.first {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+calendar-app .frame .body .calendar__container .calendar__events__item.last {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+calendar-app .frame .body .calendar__container .calendar__events__item.new__event {
+  background-color: #971c1c;
+  cursor: pointer;
+}

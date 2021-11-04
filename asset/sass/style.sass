@@ -1,0 +1,65 @@
+calendar-app .frame
+    background-color: hsl(0, 0%, 100%)
+
+    &.expanded
+        background-color: hsl(0, 0%, 100%)
+
+    .head
+        background-color: hsl(0, 69%, 52%)
+
+        .actions .action
+                background-color: hsl(0, 69%, 42%)
+
+                &:hover
+                    background-color: hsl(0, 69%, 38%)
+
+        .title
+            color: hsl(0, 0%, 95%)
+
+    .body
+        height: calc(100% - 38px)
+        padding: 20px
+
+        .controls
+            height: 38px
+
+        .table
+            height: 100%
+
+            ul
+                display: flex
+                margin: 0
+                padding: 0
+                list-style-type: none
+
+                li
+                    flex: 1 0 calc(100% / 7)
+
+            .table-head
+                height: 50px
+
+                li
+                    display: flex
+                    align-items: center
+                    padding: 0 10px
+                    line-height: 0
+                    font-weight: 500
+                    color: hsl(0, 0%, 20%)
+
+            .table-body
+                flex-wrap: wrap
+                display: grid
+                height: calc(100% - 50px)
+                grid-template-columns: repeat(7, 1fr)
+
+                li
+                    padding: 10px
+                    background-color: white
+                    border-radius: 4px
+
+                    &:hover
+                        background-color: hsl(0, 0%, 97%)
+
+                    p
+                        margin: 0
+                        color: hsl(0, 0%, 30%)

@@ -1,0 +1,148 @@
+calendar-app .frame {
+    background-color: rgba(255, 255, 255, 0.9);
+    &.expanded {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+    .head {
+      background-color: #d93030;
+  
+      .actions .action {
+        background-color: #ac2020
+        ;
+  
+        &:hover {
+          background-color: #971c1c;
+        }
+      }
+      .title {
+        color: #fff;
+        font-weight: 500;
+      }
+    }
+    .body {
+      position: relative;
+
+      .controls {
+        height: 38px;
+      }
+      .table {
+        height: 100%;
+      
+        ul.table-head {
+          display: flex;
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+      
+          li {
+            flex: 1 0 calc(100% / 7);
+          }
+        }
+        .table-head {
+          height: 50px;
+      
+          li {
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            line-height: 0;
+            font-weight: 500;
+            color: hsl(0, 0%, 20%);
+          }
+        }
+        .table-body {
+          margin: 0;
+          padding: 0;
+          border-left: 1px solid rgb(155, 155, 155);
+          border-top: 1px solid rgb(155, 155, 155);
+        }
+      }
+
+        .calendar__container {
+          .calendar__create-event {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background: rgb(0 0 0 / 20%);
+            z-index: 100;
+            justify-content: center;
+            align-items: center;
+
+            .calender__create-event__modal {
+              max-width: 500px;
+              width: 100%;
+              height: 400px;
+              background-color: rgb(255, 255, 255);
+              border-radius: 8px;
+              padding: 10px;
+
+            }
+          }
+        
+
+            .calendar__days__wrapper {
+                display: grid;
+                grid-template-columns: repeat(7, 1fr);
+                .calendar__days__item {
+                    height: 90px;
+                    border-right: 1px solid rgb(155, 155, 155);
+                    border-bottom: 1px solid rgb(155, 155, 155);
+                    padding-top: 2px;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    &.currentDay {
+                      background: #ff000036;
+                    }
+                    &.empty {
+                      background: rgb(192, 192, 192);  
+                    }
+                }
+            }
+            .calendar__events__day {
+              width: 100%;
+            } 
+            .calendar__week__wrapper {
+              position: relative;
+            }
+            .calendar__days__events__wrapper {
+              display: grid;
+              grid-template-columns: repeat(7, 1fr);
+              position: absolute;
+              left: 0;
+              right: 0;
+              top: 0;
+              margin-top: 25px;
+              overflow: hidden;
+            }
+
+            .calendar__events__item {
+              
+              display: flex;
+              align-items: center;
+              font-size: 0.9em;
+              padding: 4px 10px;
+              margin-bottom: 1px;
+          
+              span {
+                height: 16px;
+              }
+              &.first {
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+              }
+              &.last {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+              }
+              &.new__event {
+                background-color: #971c1c;
+                cursor: pointer;
+              }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "id": "calendar",
+    "name": "Calendar",
+    "icon": "asset/img/icon.png",
+    "main": "main.js",
+    "style": "asset/css/style.css"
+}
